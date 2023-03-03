@@ -1,0 +1,47 @@
+###
+POST http://localhost:5000/api/v1/superheros HTTP/1.1
+Content-Type: application/json
+
+{
+    "superhero":"Batman",
+    "universe":"DC Comics",
+    "superpowers":["Ninguno"],
+    "creators":["C1", "C2"],
+    "address":{
+        "street":"Calle",
+        "city":"Gótica",
+        "state":"Caldas",
+        "country":"Colombia"
+    }
+}
+
+###
+GET http://localhost:5000/api/v1/superheros HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/superheros/63fea0f7abb7729737894246 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/v1/superheros/63fea2a0abb772973789424a HTTP/1.1
+Content-Type: application/json
+
+{
+    "address":{
+        "street": "Calle",
+        "city": "State",
+        "state": "DC",
+        "country": "Colombia"
+    }
+}
+
+###
+DELETE http://localhost:5000/api/v1/superheros/63fea4b9abb772973789425a HTTP/1.1
+
+###
+DELETE http://localhost:5000/api/v1/superheros/ HTTP/1.1
+
+###
+DELETE http://localhost:5000/api/v1/superheros HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/superheros/superpowers-list/superpowers HTTP/1.1
